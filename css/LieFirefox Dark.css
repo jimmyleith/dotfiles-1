@@ -1,0 +1,142 @@
+@namespace html url(http://www.w3.org/1999/xhtml);
+@namespace xul url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+/* Stylish CSS by Anshi Lies :3 */
+
+/* This theme contains a few fixes for darker themes */
+
+/* Variables */
+:root {
+  
+  --font: Open Sans; --font-size: 13px;
+  
+  --url-height: 35px;
+  --url-bg: #1c1c1c;
+  --url-fg: #fff;
+    
+  --tab-height: 35px;
+  
+  --tab-bg: #1c1c1c;
+  --tab-fg: #fff;
+  
+  --active-tab-bg: #212121;
+  --active-tab-fg: #fff;
+}
+  
+/* Browser */
+@-moz-document url(chrome://browser/content/browser.xul) {
+  
+  /* Hide some elements we don't need */
+  #back-button, #forward-button, #urlbar-reload-button, #urlbar-go-button,
+  #bookmarks-menu-button, #downloads-button, #home-button, #search-container, #new-tab-button, .tabs-newtab-button, 
+  .tab-background-end, .tab-background-start, #alltabs-button, #tabview-button, #PanelUI-button, 
+  .tab-close, .tab-close-button, .tab-throbber, #nav-bar-overflow-button, #alltabs-button, #identity-box, .anonymous-div { display: none !important;}
+  
+  /* Main URL bar rice, margin fixes and centering first */
+  
+  #urlbar {
+    
+    margin-left: 5px !important;
+    width: calc(100%) !important;
+    height: var(--url-height) !important;
+    border: none !important;
+    /* Colours and fonts*/
+    background: var(--url-bg) !important;
+    color: var(--url-fg) !important;
+    font-family: var(--font) !important; font-size: var(--font-size) !important;
+    text-align: center !important;
+  }
+  
+  /* Margin fixes */
+  #nav-bar, #nav-bar-customization-target {
+    border: none !important;
+    position: absolute !important; bottom: 0 !important;
+    width: 100% !important; height: var(--url-height) !important;
+    background-color: var(--tab-bg) !important;
+  }
+  
+  /* moooreeee margin fixes */
+  #urlbar-wrapper {
+    
+    width: 100% !important;
+    margin-top: -5px !important;
+    position: absolute !important; top: 5px !important;
+    border-bottom: 0px solid #000000 !important;  
+  }
+
+ 
+ /* Tab rice time, global fonts and sizes first */
+
+ tab {
+ 
+   height: var(--tab-height) !important;
+   font-family: var(--font) !important; font-size: var(--font-size) !important;
+ }
+ 
+ /* Selected (active) tab colors */
+ .tabbrowser-tab[selected] {
+   
+   background: var(--active-tab-bg) !important;
+   color: var(--active-tab-fg) !important;
+ }
+  
+ /* Not selected (inactive) tab colors */
+ .tabbrowser-tab:not([selected]) {
+   
+   background: var(--tab-bg) !important;
+   color: var(--tab-fg) !important;
+ }
+  
+ /* Corrects squared tabs */
+ .tabbrowser-tab *, .tabs-newtab-button * {
+   background: none !important; list-style-image: none !important;
+   margin: 0 0 0 0 !important; padding: 0 0 0 0 !important;
+   -moz-appearance: none !important;
+ }
+  
+ /* Margin fixes, adding a little space between the icon and text on tabs */
+ .tabbrowser-tab label{
+   padding: 0 14px 0 14px !important;
+ }.tab-icon-image {
+   margin-left: 10px !important;
+ }
+ 
+ /* More margin fixes, pushes tabs to the left */
+ #TabsToolbar, #tabbrowser-tabs {
+   margin: 0 -8px !important;
+ }
+
+ /* You can uncomment below to center your tabs and have them take up all space available */
+  
+ /*
+ .tabbrowser-tab[fadein]:not([pinned]) { 
+  min-width: 50px !important; max-width: 100% !important; 
+   } 
+ */
+ 
+ /* Hides the seperators between tabs */
+ .tabbrowser-tab::before, .tabbrowser-tab::after { 
+   
+  background: none !important; opacity: 1 !important; visibility: visible !important; 
+ }
+ 
+ /* Fix for space under URL bar and empty tab space
+    normally it uses your GTK theme which looks terrible if it isnt flat white */
+  .scrollbox-innerbox{
+   background-color: var(--tab-bg);
+   
+ }
+  
+ /* Tabs finished */
+  
+ /* Removes menu seperators and icons */
+ menuitem + menuseparator, menu + menuseparator, menuitem-iconic { 
+   display: none !important; 
+ }
+
+ /* Hides icons from the right click menu of a text box */
+ .textbox-contextmenu image {
+  visibility: hidden !important;
+ }
+
+}

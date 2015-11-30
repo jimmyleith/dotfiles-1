@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<meta charset="UTF-8"> 
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<html lang="en-US">
+<title>home</title>
+<link rel="stylesheet" type="text/css" href="style.css"></link>
+
+<body>
+<div id="container">
+
+
+
+
+<div class="sticky"> 
+
+	<div class="search">
+	<form method="get" action="http://www.google.com/search">
+		<input type="text" name="q" id="form" placeholder=" " size="31" maxlength="255" value="" />
+		<input type="submit" id="formbutton" value="Search" />
+    </form>
+
+	</div>
+
+	<script> $(window).scroll(function(){
+
+  		var sticky = $('.sticky'),
+      	scroll = $(window).scrollTop();
+
+ 			if (scroll >= 45) {
+ 				sticky.addClass('fixed');
+ 				document.getElementById("form").style.minWidth = "99%";
+  			} else { 
+  				sticky.removeClass('fixed');
+  				document.getElementById("form").style.minWidth = "40%";
+  		}
+	}); 
+	</script> 
+</div>
+
+<div id="links">
+	<a href="http://boards.4chan.org/g"> /g/ </a>
+	<a href="http://boards.4chan.org/w"> /w/ </a>
+	<a href="http://boards.4chan.org/wg"> /wg/ </a>
+	<a href="http://boards.4chan.org/vg"> /vg/ </a>
+	<a href="http://boards.4chan.org/c"> /c/ </a>
+	<a href="http://boards.4chan.org/wsg"> /wsg/ </a>
+	<br>
+
+	<a href="http://web.skype.com">Skype</a>
+	<a href="https://www.youtube.com/watch?v=pAU-x1Gosis&list=PLweOkVlnj7x-y1yr1_7htpFVcczYcX4gE&index=1">Playlist</a>
+</div>
+
+<div class="pageBody">
+<p>ANIME</p>
+</div>
+</body>
+</html>

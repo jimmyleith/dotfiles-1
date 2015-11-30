@@ -1,0 +1,48 @@
+! Xresources file
+
+! URxvt*.transparent: true
+! URxvt.shading: 0 to 99 darkens, 101 to 200 lightens
+! URxvt*.shading: 25
+
+! scrollbar style - rxvt (default), plain (compact), next, xterm
+URxvt.scrollstyle: xterm
+URxvt.scrollBar: false
+
+! scroll with output
+! URxvt*scrollTtyOutput: true
+
+! scroll to bottom on keypress
+! URxvt*scrollTtyKeypress: true
+
+URxvt*font: xft:Cousine:size=9
+URxvt*boldFont: xft:Cousine:size=9
+URxvt.letterSpace: -1
+
+
+URxvt*foreground: #FFFFFF
+URxvt*background: #1c1c1c
+
+!black
+URxvt*color0: #000000
+URxvt*color8: #4d4d4d
+!red
+URxvt*color1: #D81860
+URxvt*color9: #CC5050
+!green
+URxvt*color2: #B7CE42
+URxvt*color10: #BDE077
+!yellow
+URxvt*color3: #FFFFFF
+URxvt*color11: #FFE863
+!blue
+URxvt*color4: #5592D9
+URxvt*color12: #AACCBB
+!magenta
+URxvt*color5: #B7416E
+URxvt*color13: #BB4466
+!cyan
+URxvt*color6: #2b536d
+URxvt*color14: #2b536d
+!white
+URxvt*color7: #FFFFFF
+URxvt*color15: #FFFFFF
