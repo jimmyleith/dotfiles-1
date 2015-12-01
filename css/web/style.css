@@ -1,109 +1,46 @@
 body {
-	background-color: #fff;
+
 	font-family: sans-serif;
-	font-size: 14px;
 }
 
-.pageBody {
-	width: 100% !important;
-	bottom: 0;
-	margin-top: 510px;
-}
-
-h4, h3 {
-	font-size: 24px;
-	font-family: sans-serif;
-	font-style: normal;
-	background: #transparent;
+.searchContainer, .navContainer {
+	
+	position: relative;
 	text-align: center;
-	font-weight: 100;
-	letter-spacing: 10px;
-	height: 70px;
-	line-height: 70px;
-	min-width: 100%; max-width: 100%;
-}
-h3 {
-	font-size: 18px !important;
-	font-weight: 300 !important;
-	letter-spacing: 20px !important;
-	word-spacing: -10px;
-	margin-top: -70px;
-	color: #1A1A1A;
-	text-shadow: -2px -2px #B5B5B5;
+	top: 40px;
 }
 
-p {
-	font-size: 14px;
-	font-weight: 100px;
-	letter-spacing: 40px;
-	text-align: center;
-	color: #212121;
-}
+#searchInput {
 
-.search {
-	width: 99%;
-	text-align: center;
-	margin-top: -20px;
-	position: absolute;
-}
-
-.fixed {
-    position: fixed;
-    top:0; left:10px;
-    width:99%;
-    margin-top: 20px !important;
-}
-
-#form {
-	background: #fff;
-	color: #000;
 	border: solid 2px #daa8ea;
+	width: 40%;
 	height: 35px;
-	min-width: 40%; max-width: 40%;
-}
-
-#formbutton {
-	display: none;
-	color: #C4C4C4;
-	height: 35px;
-	margin-top: 10px;
-	margin-left: 5px;
-	background: #daa8ea;
-	border: solid 0px black !important;
-}
-
-#links {
 	text-align: center;
-	width: 100%;
-	margin-top: 70px;
+	font-size: 20px;
+	font-weight: 100;
 }
 
 a {
-
-	color: #363636;
-	font-family: Open Sans;
-	text-align: center;
-	text-decoration: none;
-	font-size: 20px;
-
-	background: transparent;
-	border:solid black 0px;
-
-	margin: 25px;
-	min-width: 90px !important; min-height: 90px !important;
-	max-width: 90px !important; max-height: 90px !important;
-	padding: 10px;
-	float: center;
-	line-height: 80px;
 	display: inline-block;
+	margin: 25px;
 	vertical-align: middle;
-	transition-property: background-color, color, font-size;
-	transition-duration: 0.2s, 0.2s, 0.2s;
+	height: 90px; width: 90px;
+	line-height: 90px;
+
+	padding: 10px;
+
+	color: #404040;
+	font-size: 18px;
+	text-decoration: none;
+	background: none;
+
+	transition: font-size 0.2s, color 0.2s, background 0.2s;
+
 }
 
-a:hover{
+a:hover {
+
 	background: #daa8ea;
 	color: #fff;
-	font-size: 25px;
+	font-size: 22px;
 }
-
