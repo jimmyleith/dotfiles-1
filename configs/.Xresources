@@ -8,41 +8,50 @@
 URxvt.scrollstyle: xterm
 URxvt.scrollBar: false
 
+URxvt.internalBorder: 15
+
 ! scroll with output
 ! URxvt*scrollTtyOutput: true
 
 ! scroll to bottom on keypress
 ! URxvt*scrollTtyKeypress: true
 
-URxvt*font: xft:Cousine:size=9
-URxvt*boldFont: xft:Cousine:size=9
-URxvt.letterSpace: -1
+URxvt*font: xft:Meslo LG M:size=9
+URxvt*boldFont: xft:Meslo LG M:size=9
+URxvt.letterSpace: -1.5
 
 
 URxvt*foreground: #FFFFFF
-URxvt*background: #1c1c1c
+URxvt*background: #222324
 
 !black
 URxvt*color0: #000000
 URxvt*color8: #4d4d4d
+
 !red
 URxvt*color1: #D81860
-URxvt*color9: #CC5050
+URxvt*color9: #D81860
+
 !green
-URxvt*color2: #B7CE42
-URxvt*color10: #BDE077
+URxvt*color2: #426F42
+URxvt*color10: #426F42
+
 !yellow
-URxvt*color3: #FFFFFF
-URxvt*color11: #FFE863
+URxvt*color3: #4d4d4d
+URxvt*color11: #4d4d4d
+
 !blue
-URxvt*color4: #5592D9
-URxvt*color12: #AACCBB
+URxvt*color4: #3F809C
+URxvt*color12: #3F809C
+
 !magenta
 URxvt*color5: #B7416E
 URxvt*color13: #BB4466
+
 !cyan
-URxvt*color6: #2b536d
-URxvt*color14: #2b536d
+URxvt*color6: #404D52
+URxvt*color14: #404D52
+
 !white
 URxvt*color7: #FFFFFF
 URxvt*color15: #FFFFFF
