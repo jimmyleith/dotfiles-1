@@ -3,24 +3,23 @@
 
 /* Stylish CSS by Anshi Lies :3 */
 
-/* As a note, don't bother with this CSS if you want a dark theme
-    it's really broken due to abusing margins */
+/* This theme contains a few fixes for darker themes */
 
 /* Variables */
 :root {
   
   --font: Open Sans; --font-size: 13px;
   
-  --url-height: 35px;
-  --url-bg: #fff;
+  --url-height: 30px;
+  --url-bg: #efefef;
   --url-fg: #000;
     
-  --tab-height: 35px;
+  --tab-height: 40px;
   
-  --tab-bg: #fff;
-  --tab-fg: #000;
+  --tab-bg: #222324;
+  --tab-fg: #e3e3e3;
   
-  --active-tab-bg: #daa8ea;
+  --active-tab-bg: #F26247;
   --active-tab-fg: #fff;
 }
   
@@ -31,17 +30,16 @@
   #back-button, #forward-button, #urlbar-reload-button, #urlbar-go-button,
   #bookmarks-menu-button, #downloads-button, #home-button, #search-container, #new-tab-button, .tabs-newtab-button, 
   .tab-background-end, .tab-background-start, #alltabs-button, #tabview-button, #PanelUI-button, 
-  .tab-close, .tab-close-button, .tab-throbber, #nav-bar-overflow-button, #alltabs-button { display: none !important;}
+  .tab-close, .tab-close-button, .tab-throbber, #nav-bar-overflow-button, #alltabs-button, #identity-box, .anonymous-div { display: none !important;}
   
   /* Main URL bar rice, margin fixes and centering first */
   
   #urlbar {
     
-    border: none !important; 
-    margin: 0 0 0 0 !important;
+    margin-left: 5px !important;
     width: calc(100%) !important;
     height: var(--url-height) !important;
-    
+    border: solid 0px var(--active-tab-bg) !important;
     /* Colours and fonts*/
     background: var(--url-bg) !important;
     color: var(--url-fg) !important;
@@ -50,11 +48,11 @@
   }
   
   /* Margin fixes */
-  #nav-bar {
-    
+  #nav-bar, #nav-bar-customization-target {
+    border: solid 0px var(--active-tab-bg) !important;
     position: absolute !important; bottom: 0 !important;
     width: 100% !important; height: var(--url-height) !important;
-    background-color: var(--tab-bg) !important;
+    background-color: var(--url-bg) !important;
   }
   
   /* moooreeee margin fixes */
@@ -64,6 +62,10 @@
     margin-top: -5px !important;
     position: absolute !important; top: 5px !important;
     border-bottom: 0px solid #000000 !important;  
+  }
+  
+  #notification-popup-box {
+    background-color: var(--url-bg) !important;
   }
 
  
@@ -78,6 +80,7 @@
  /* Selected (active) tab colors */
  .tabbrowser-tab[selected] {
    
+   margin-bottom: 1px !important;
    background: var(--active-tab-bg) !important;
    color: var(--active-tab-fg) !important;
  }
@@ -91,7 +94,6 @@
   
  /* Corrects squared tabs */
  .tabbrowser-tab *, .tabs-newtab-button * {
-   
    background: none !important; list-style-image: none !important;
    margin: 0 0 0 0 !important; padding: 0 0 0 0 !important;
    -moz-appearance: none !important;
@@ -106,10 +108,7 @@
  
  /* More margin fixes, pushes tabs to the left */
  #TabsToolbar, #tabbrowser-tabs {
-   
    margin: 0 -8px !important;
- }#identity-box {
-   margin-left: 3px !important;
  }
 
  /* You can uncomment below to center your tabs and have them take up all space available */
