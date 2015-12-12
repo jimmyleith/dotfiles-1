@@ -1,8 +1,12 @@
--- If second wallpaper variable is left blank (""), the first wallpaper will repeat across all screens
+-- Anshicat theme
+
+-- MPD widget is a wip side project, got sick of lain
 
 -- Required libraries
 local gears = require("gears")
 local lain = require ("lain")
+
+local io = { popen = io.popen }
 
 local awful = require ("awful") 
 local vicious = require ("vicious")
@@ -17,8 +21,6 @@ local beautiful = require("beautiful")
 
 
 local xdg_menu = require("archmenu")
-
-maxPics = 5
 
 do
     local sterr = false
@@ -107,7 +109,7 @@ mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon, menu = myma
 -- Wibox
 
 mpd = wibox.widget.textbox()
-mpdupdater = timer({ timeout = 1 })
+mpdupdater = timer({ timeout = 2 })
 mpdupdater:connect_signal("timeout", function() mpd:set_text(crrSong()) end )
 mpdupdater:start()
 
@@ -131,12 +133,13 @@ cpu = lain.widgets.cpu({
     end
 })
 
-				cpu_graph = blingbling.line_graph({ height = 18,
-                                        width = 100,
-                                        show_text = false,
-                                        rounded_size = 1,
-                                        graph_background_color = beautiful.bg_focus
-                                      })
+cpu_graph = blingbling.line_graph({ 
+ height = 18,
+ width = 100,
+ show_text = false,
+ rounded_size = 1,
+ graph_background_color = beautiful.bg_focus
+})
 cpu_graph:set_graph_line_color("#B00042")
 cpu_graph:set_graph_color("#B00042")
 vicious.register(cpu_graph, vicious.widgets.cpu,'$1',2)
@@ -146,6 +149,8 @@ temp = lain.widgets.temp({
         widget:set_text(" CORE: " .. coretemp_now .. "°C ")
     end
 })
+
+
 
 spr = wibox.widget.textbox()
 spr:set_markup("<span color='#D81860'> II </span>")
@@ -253,7 +258,7 @@ for s = 1, screen.count() do
             left_layout:add(mytaglist[s])
             left_layout:add(sprb)
             left_layout:add(mpd)
-            
+            left_layout:add(sprb)
             right_layout:add(memory)
             right_layout:add(spr)
             right_layout:add(cpu)
