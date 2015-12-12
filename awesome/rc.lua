@@ -8,7 +8,6 @@ local awful = require ("awful")
 local vicious = require ("vicious")
 local naughty = require ("naughty")
 
-
 awful.rules = require("awful.rules")
               require("awful.autofocus")
 local blingbling = require("blingbling")
@@ -39,13 +38,13 @@ os.setlocale(os.getenv("LANG"))
 beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/Anshicat/theme.lua")
 
 autohide_titlebars = true
-autohide_topbar = true
+autohide_topbar = false
 
 modkey     = "Mod4"
 altkey     = "Mod1"
 terminal   = "urxvt"
 align_widgets_screen_1 = true
-wallpaper_1 = os.getenv("HOME") .. "/Pictures/Wallpapers/wall9.jpg"
+wallpaper_1 = os.getenv("HOME") .. "/Pictures/Wallpapers/japanedit3.png"
 wallpaper_2 = ""
 
 -- Tags
@@ -106,6 +105,17 @@ mymainmenu = awful.menu({ items = {
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon, menu = mymainmenu })
 
 -- Wibox
+
+mpd = wibox.widget.textbox()
+mpdupdater = timer({ timeout = 1 })
+mpdupdater:connect_signal("timeout", function() mpd:set_text(crrSong()) end )
+mpdupdater:start()
+
+function crrSong() 
+    local s = string.sub(awful.util.pread("ncmpcpp --current-song"), 8, -1)
+
+    return s
+end
 
 markup = lain.util.markup
 
@@ -241,6 +251,9 @@ for s = 1, screen.count() do
         if s == 1 then
 
             left_layout:add(mytaglist[s])
+            left_layout:add(sprb)
+            left_layout:add(mpd)
+            
             right_layout:add(memory)
             right_layout:add(spr)
             right_layout:add(cpu)
@@ -281,7 +294,6 @@ globalkeys = awful.util.table.join(
 --Time
 
 awful.key({ modkey }, "b", function() naughty.notify({ 
-    --icon=string.format("%s", getPic()),
 	text=string.format("%s %s", "The time is", os.date ("%I:%M"))})
 end),
 						
@@ -572,19 +584,6 @@ client.connect_signal("focus",
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
 root.keys(globalkeys)
-
--- get pic
-currentPic = 0
-function getPic()
-
-	if currentPic < maxPics then
-		currentPic = pics+1
-		return "/home/anshi/Pictures/Weeb/qts/icons/"..currentPic..".jpg"
-	else
-		currentPic = 1
-		return "/home/anshi/Pictures/Weeb/qts/icons/"..currentPic..".jpg"
-	end
-end
 
 -- Hide wibox
 
