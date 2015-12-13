@@ -1,25 +1,23 @@
 @namespace html url(http://www.w3.org/1999/xhtml);
 @namespace xul url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-/* Stylish CSS by Anshi Lies :3 */
-
-/* This theme contains a few fixes for darker themes */
+/* Stylish CSS for firefox */
 
 /* Variables */
 :root {
   
-  --font: Open Sans; --font-size: 13px;
+  --font: Droid Sans; --font-size: 13px;
   
-  --url-height: 30px;
-  --url-bg: #efefef;
-  --url-fg: #000;
+  --url-height: 35px;
+  --url-bg: #1c1c1c;
+  --url-fg: #fff;
     
-  --tab-height: 40px;
+  --tab-height: 25px;
   
-  --tab-bg: #222324;
-  --tab-fg: #e3e3e3;
+  --tab-bg: #1c1c1c;
+  --tab-fg: #fff;
   
-  --active-tab-bg: #F26247;
+  --active-tab-bg: #d80168;
   --active-tab-fg: #fff;
 }
   
@@ -30,16 +28,19 @@
   #back-button, #forward-button, #urlbar-reload-button, #urlbar-go-button,
   #bookmarks-menu-button, #downloads-button, #home-button, #search-container, #new-tab-button, .tabs-newtab-button, 
   .tab-background-end, .tab-background-start, #alltabs-button, #tabview-button, #PanelUI-button, 
-  .tab-close, .tab-close-button, .tab-throbber, #nav-bar-overflow-button, #alltabs-button, #identity-box, .anonymous-div { display: none !important;}
+  .tab-close, .tab-close-button, .tab-throbber, #nav-bar-overflow-button, #alltabs-button, #identity-box, .anonymous-div,  #notification-popup-box { display: none !important;}
   
   /* Main URL bar rice, margin fixes and centering first */
   
+
+  #notification-popup-box {
+    background: transparent !important;
+  }
   #urlbar {
-    
     margin-left: 5px !important;
     width: calc(100%) !important;
     height: var(--url-height) !important;
-    border: solid 0px var(--active-tab-bg) !important;
+    border: none !important;
     /* Colours and fonts*/
     background: var(--url-bg) !important;
     color: var(--url-fg) !important;
@@ -49,11 +50,12 @@
   
   /* Margin fixes */
   #nav-bar, #nav-bar-customization-target {
-    border: solid 0px var(--active-tab-bg) !important;
+    margin-top: 0 !important;
     position: absolute !important; bottom: 0 !important;
     width: 100% !important; height: var(--url-height) !important;
-    background-color: var(--url-bg) !important;
+    background-color: var(--tab-bg) !important;
   }
+  
   
   /* moooreeee margin fixes */
   #urlbar-wrapper {
@@ -62,10 +64,6 @@
     margin-top: -5px !important;
     position: absolute !important; top: 5px !important;
     border-bottom: 0px solid #000000 !important;  
-  }
-  
-  #notification-popup-box {
-    background-color: var(--url-bg) !important;
   }
 
  
@@ -80,7 +78,6 @@
  /* Selected (active) tab colors */
  .tabbrowser-tab[selected] {
    
-   margin-bottom: 1px !important;
    background: var(--active-tab-bg) !important;
    color: var(--active-tab-fg) !important;
  }
