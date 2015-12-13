@@ -1,12 +1,10 @@
 -- Anshicat theme
 
--- MPD widget is a wip side project, got sick of lain
+-- MPD widget is broken btw
 
 -- Required libraries
 local gears = require("gears")
 local lain = require ("lain")
-
-local io = { popen = io.popen }
 
 local awful = require ("awful") 
 local vicious = require ("vicious")
@@ -109,11 +107,12 @@ mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon, menu = myma
 -- Wibox
 
 mpd = wibox.widget.textbox()
-mpdupdater = timer({ timeout = 2 })
-mpdupdater:connect_signal("timeout", function() mpd:set_text(crrSong()) end )
-mpdupdater:start()
+--mpdupdater = timer({ timeout = 2 })
+--mpdupdater:connect_signal("timeout", function() mpd:set_text(crrSong()) end )
+--mpdupdater:start()
 
 function crrSong() 
+
     local s = string.sub(awful.util.pread("ncmpcpp --current-song"), 8, -1)
 
     return s
