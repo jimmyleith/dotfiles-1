@@ -7,13 +7,13 @@
 #
 # See the file COPYING for the full license text.
 
-gtk_color_scheme	= "bg_color:#212121\nselected_bg_color:#A2D49F\nbase_color:#212121"	# Background, base
+gtk_color_scheme	= "bg_color:#121212\nselected_bg_color:#809E9D\nbase_color:#121212"	# Background, base
 gtk_color_scheme	= "fg_color:#FFFFFF\nselected_fg_color:#ffffff\ntext_color:#FFFFFF"	# Foreground, text
 gtk_color_scheme 	= "sidebar_color:#FFFFFF"                                           # Custom colors
 gtk_color_scheme	= "tooltip_bg_color:#000000\ntooltip_fg_color:#dedede"                    # Tooltips
-gtk_color_scheme	= "link_color:#A2D49F"                                                 # Hyperlinks
-gtk_color_scheme	= "frame_color:#212121\ninactive_frame_color:#212121"               # Fix for Chrome
-gtk_color_scheme	= "bg_color_dark:#212121\ntext_color_dark:#ffffff"                     # Dark colors
+gtk_color_scheme	= "link_color:#809E9D"                                                 # Hyperlinks
+gtk_color_scheme	= "frame_color:#121212\ninactive_frame_color:#121212"               # Fix for Chrome
+gtk_color_scheme	= "bg_color_dark:#121212\ntext_color_dark:#ffffff"                     # Dark colors
 
 gtk-icon-sizes		= "gtk-button=16,16"				                                # Set icon size for buttons
 gtk-button-images	= 0									                                # Disables icons for buttons with text
@@ -349,7 +349,7 @@ style "murrine-scrollbar-dark" = "murrine-scrollbar"
 {	
 
 	engine "murrine" {
-		gradient_shades			= {1.0,1.0,1.0,1.0}
+		gradient_shades			= {0.0,0.0,0.0,0.0}
 		trough_shades           = { 0.0, 0.0}
 		border_shades			= { 1.0, 1.0}
 	}
