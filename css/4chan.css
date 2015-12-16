@@ -1,0 +1,136 @@
+@-moz-document url-prefix("http://boards.4chan.org") {
+
+
+/* 4chan css :3 */
+
+
+/* Colours and housekeeping */
+
+body {
+    background: #121212 !important;
+}
+
+#qr {
+    border: 0px solid #121212 !important;
+    box-shadow: none !important;
+    border-radius: 0px 0px 0px 0px !important;
+}   
+.prettyprint {
+    font-size: 11px !important;
+    padding: 2px !important;
+}
+#file-n-submit > input:nth-child(3), #qr-file-button {
+    color: #000 !important;
+    font-size: 11px !important;
+}
+    
+#file-n-submit {
+    background: #212121 !important;
+}
+    
+#qr > div:nth-child(1), #qr-filename-container {
+    background: #212121 !important;
+    color: #fff !important;
+    padding: 5px !important;
+    font-size: 11px !important;
+}
+    
+.navLinks {
+    color: #121212 !important;  
+    text-align: center !important;
+}
+  
+#header-bar {
+    background: #1c1c1c !important;
+    border: none !important;
+}
+
+/* Main text colour */
+.dateTime, .postMessage, .file-info, .bottomCtrl, .comment, tr, li, .subject, .boardTitle{
+    color: #fff !important;
+}
+
+.name {
+    font-weight: 500 !important;
+    color: #fff !important;
+}
+    
+.reveal-spoilers {
+    background: #1c1c1c !important;
+    display: none !important;
+}
+
+a, a:hover, .quotelink, .catalog-stats{
+    color: #809e9d !important;
+    text-decoration: none !important;
+}
+
+hr, .absBotDisclaimer, #footer-links, .qr-link-container, #togglePostFormLink, #bannerCnt, 
+input[type="checkbox"], .fa-minus-square-o, .qr-link-bottom, .qr-link-container-bottom, #paste-area { display: none !important; }
+
+/* Center out the thread */
+
+div.thread {
+    width: 1100px !important;
+    margin: 0 auto !important;
+    margin-top: 30px !important;
+}     
+
+/* Fix width and padding */
+
+.post.reply {
+    width: 100% !important;
+    padding: 10px !important;
+    -moz-box-sizing:border-box!important;
+    background-color: #1c1c1c !important;
+    border: none !important;
+}
+
+/* Fix some margins */
+
+.catalog-small {  
+    margin-top: 15px !important;
+}
+
+.postInfo {
+    margin-left: 21px !important;
+}
+
+.op  div.postInfo {
+  margin-left: -5px !important;
+}
+  
+.bottomCtrl {
+    float: none !important;
+    text-align: center !important;  
+    margin-top: 15px !important;
+}
+
+.fileThumb {
+    margin-top: 15px !important;
+}
+
+/* Dank hover effects */  
+
+.menu-button {
+    opacity: 0 !important; 
+    margin-right: -5px !important;
+    transition: opacity 0.2s, margin-right 0.2s !important;
+}
+
+.post:hover .menu-button {
+      opacity: 1 !important;
+      margin-right: 0 !important;
+}
+
+.fileText {
+    opacity: 0 !important;
+    margin-bottom: -16px !important;
+    transition: opacity 0.2s, margin-bottom 0.2s;
+}
+.post:hover .fileText {
+    opacity: 1 !important;
+    margin-bottom: -10px !important;
+}
+    
+}
