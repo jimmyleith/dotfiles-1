@@ -7,29 +7,29 @@ theme.useless_gap_width		= 10
 
 theme.font			= "DejaVu Sans 9"
 
-theme.bg_normal			= "#1C1C1C"
+theme.bg_normal			= "#121212"
 theme.fg_normal			= "#FFF"
 
-theme.bg_focus			= "#1C1C1C"
+theme.bg_focus			= "#121212"
 theme.fg_focus			= "#D81860"
 
 theme.fg_urgent			= "#FFF"
-theme.bg_urgent			= "#1C1C1C"
+theme.bg_urgent			= "#121212"
 
 theme.dmenu_fg_normal	= "#FFF"
-theme.dmenu_bg_normal	= "#1C1C1C"
+theme.dmenu_bg_normal	= "#121212"
 
 theme.dmenu_fg_focus	= "#FFF"
 theme.dmenu_bg_focus	= "#D81860"
 
 
-theme.tasklist_bg_normal	= "#1C1C1C"
+theme.tasklist_bg_normal	= "#121212"
 theme.tasklist_fg_normal	= "#FFF"
 
-theme.tasklist_bg_focus		= "#1C1C1C"
+theme.tasklist_bg_focus		= "#121212"
 theme.tasklist_fg_focus		= "#FFF"
 
-theme.tasklist_fg_minimize	= "#1C1C1C"
+theme.tasklist_fg_minimize	= "#121212"
 
 theme.tasklist_disable_icon	= true
 theme.tasklist_floating		= "[F] "

@@ -1,14 +1,8 @@
 ! Xresources file
 
-! URxvt*transparent: true
-! URxvt*shading: 0 to 99 darkens, 101 to 200 lightens
-! URxvt*shading: 25
-
-! scrollbar style - rxvt (default), plain (compact), next, xterm
-URxvt*scrollstyle: xterm
 URxvt*scrollBar: false
 
-URxvt.internalBorder: 10
+URxvt.internalBorder: 4
 
 ! scroll with output
 ! URxvt*scrollTtyOutput: true
@@ -21,12 +15,14 @@ URxvt*boldFont: xft:Meslo LG M:size=9
 URxvt*letterSpace: -2
 URxvt*lineSpace: -4
 
-URxvt*foreground: #FFFFFF
-URxvt*background: #1c1c1c
+URxvt.depth: 32
+
+URxvt*foreground: #ffffff
+URxvt*background: [100]#121212
 
 !black
-URxvt*color0: #000000
-URxvt*color8: #4d4d4d
+URxvt*color0: #1c1c1c
+URxvt*color8: #1c1c1c
 
 !red
 URxvt*color1: #D81860
@@ -37,7 +33,7 @@ URxvt*color2: #426F42
 URxvt*color10: #426F42
 
 !yellow
-URxvt*color3: #4d4d4d
+URxvt*color3: #F26247
 URxvt*color11: #4d4d4d
 
 !blue
