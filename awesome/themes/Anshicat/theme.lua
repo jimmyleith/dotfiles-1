@@ -37,12 +37,12 @@ theme.tasklist_floating		= "[F] "
 theme.taglist_fg_focus		= "#D81860"
 
 theme.border_width		= "0"
-theme.border_normal		= "#333333"
-theme.border_focus		= "#333333"
+theme.border_normal		= "#e3e3e3"
+theme.border_focus		= "#D81860"
 theme.border_marked		= "#66AABB"
 
 theme.titlebar_bg_normal	= "#262626"
-theme.titlebar_bg_focus		= "#262626"
+theme.titlebar_bg_focus		= "#D81860"
 theme.titlebar_fg_normal	= "#ffffff"
 theme.titlebar_fg_focus		= "#ffffff"
 

@@ -44,7 +44,7 @@ modkey     = "Mod4"
 altkey     = "Mod1"
 terminal   = "urxvt"
 align_widgets_screen_1 = true
-wallpaper_1 = os.getenv("HOME") .. "/Pictures/Wallpapers/japanedit3.png"
+wallpaper_1 = os.getenv("HOME") .. "/Pictures/Wallpapers/japanedit5.png"
 wallpaper_2 = ""
 
 -- Tags
@@ -270,6 +270,11 @@ for s = 1, screen.count() do
             left_layout:add(mylayoutbox[s])
         end
 
+        if s == 2 then 
+
+            left_layout:add(mytaglist[s])
+        end
+
         -- Adds all layout items to wibox
         local layout = wibox.layout.align.horizontal()
 
@@ -297,10 +302,19 @@ globalkeys = awful.util.table.join(
 
 --Time
 
-awful.key({ modkey }, "b", function() naughty.notify({ 
-	text=string.format("%s %s", "The time is", os.date ("%I:%M"))})
+awful.key({ modkey }, "b", function() 
+    naughty.notify({ 
+	   text=string.format("%s%s", "It is currently:\n", "<span color='#D81860'>" .. os.date ("%A %dth %b, %I:%M" .. string.lower(os.date("%p"))) .. "</span>"),
+       timeout=2
+    })
 end),
-						
+
+awful.key({ modkey }, "v", function() 
+    naughty.notify({
+        text=string.format("%s%s", "Currently Playing:\n", "<span color='#d81860'>" .. crrSong() .. "</span>"),
+        timeout=2
+    })
+end),					
     
 awful.key({ modkey },"x",     
 
