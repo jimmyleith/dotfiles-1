@@ -10,8 +10,8 @@ URxvt.internalBorder: 4
 ! scroll to bottom on keypress
 ! URxvt*scrollTtyKeypress: true
 
-URxvt*font: xft:Meslo LG M:size=9
-URxvt*boldFont: xft:Meslo LG M:size=9
+URxvt*font: xft:Meslo LG S:pixelsize=11.5
+URxvt*boldFont: xft:Meslo LG S:pixelsize=11.5
 URxvt*letterSpace: -2
 URxvt*lineSpace: -4
 
@@ -21,8 +21,8 @@ URxvt*foreground: #ffffff
 URxvt*background: [100]#121212
 
 !black
-URxvt*color0: #1c1c1c
-URxvt*color8: #1c1c1c
+URxvt*color0: #121212
+URxvt*color8: #121212
 
 !red
 URxvt*color1: #D81860

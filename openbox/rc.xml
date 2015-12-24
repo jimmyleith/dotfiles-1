@@ -257,7 +257,7 @@
     </keybind>
     <keybind key="Mod4-x">
       <action name="Execute">
-        <command>dmenu_run -i -fn 'Open Sans Semibold-8' -h '22' -p 'Run command:' -nb '#000000' -sb '#000000' -nf '#ffffff' -sf '#ffffff'</command>
+        <command>dmenu_run -i -fn 'Open Sans Semibold-8' -h '22' -p 'Run command:' -nb '#000000' -sb '#000000' -nf '#ffffff' -sf '#d81860'</command>
       </action>
     </keybind>
     <keybind key="A-p">

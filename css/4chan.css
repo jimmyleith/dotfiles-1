@@ -46,8 +46,13 @@ body {
 }
 
 /* Main text colour */
-.dateTime, .postMessage, .file-info, .bottomCtrl, .comment, tr, li, .subject, .boardTitle{
+.dateTime, .postMessage, .file-info, .bottomCtrl, .comment, tr, li, .subject, .boardTitle, .globalMessage{
     color: #fff !important;
+}
+    
+.globalMessage {
+    padding: 5px !important; 
+    font-weight: 400 !important;
 }
 
 .name {
@@ -61,7 +66,7 @@ body {
 }
 
 a, a:hover, .quotelink, .catalog-stats{
-    color: #809e9d !important;
+    color: #d81860 !important;
     text-decoration: none !important;
 }
 
@@ -72,22 +77,34 @@ input[type="checkbox"], .fa-minus-square-o, .qr-link-bottom, .qr-link-container-
 
 div.thread {
     width: 1100px !important;
-    margin: 0 auto !important;
+    margin: 30px auto !important;
     margin-top: 30px !important;
 }     
 
-/* Fix width and padding */
+    
+    
+/* Fix width and padding 
 
+    .postMessage {
+
+        max-height: 130px !important;
+    }   
+    
+    */
 .post.reply {
     width: 100% !important;
     padding: 10px !important;
     -moz-box-sizing:border-box!important;
     background-color: #1c1c1c !important;
     border: none !important;
+    margin: 15px 0 !important;
 }
+
 
 /* Fix some margins */
 
+
+    
 .catalog-small {  
     margin-top: 15px !important;
 }

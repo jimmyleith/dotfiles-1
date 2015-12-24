@@ -16,42 +16,54 @@
   
   /* Hide stuff */
   
-  .tab-background-start, .tab-background-end, #PanelUI-button, #back-button, #forward-button, .autocomplete-history-dropmarker.urlbar-history-dropmarker, #urlbar-reload-button, .tab-icon-image,.tabs-newtab-button, .tab-close-button.close-icon, .tab-icon-overlay{
+  .tab-background-start, .tab-background-end, #PanelUI-button,/* #back-button, #forward-button, #urlbar-reload-button, */ .tab-close-button.close-icon, .tab-icon-image, .autocomplete-history-dropmarker.urlbar-history-dropmarker,.tabs-newtab-button, .tab-icon-overlay{
     display: none !important;
   }
   
   /* Tabs */
+  
+  #TabsToolbar {
+    -moz-box-ordinal-group:10000!important
+  }
+  
+  .arrowscrollbox-scrollbox {
+    background: var(--bg) !important;
+  }
   
   tab {
     font-family: var(--font) !important; 
     font-size: var(--font-size) !important;
     height: 22px !important;
     font-weight: 600 !important;
+    border: none !important;
   }
   
   .tabbrowser-tab *, .tabs-newtab-button * {
     background: none !important; list-style-image: none !important;
     margin: 0 0 0 0 !important;
     padding-left: 1px !important;
-
     -moz-appearance: none !important;
     border: none !important;
  }
   
   .tabbrowser-tab[selected] {
     background: var(--bg) !important;
-    color: #809E9D !important;
+    color: #fff !important;
     text-align: center !important;
+
+    border-bottom: solid 3px #d81860 !important;
   }
   
   .tabbrowser-tab:not([selected]) {
     background: var(--bg) !important;
     text-align: center !important;
     color: #fff !important;
+
   }
   
-   #TabsToolbar, #tabbrowser-tabs {
-    margin: 0 -8px !important;
+  #TabsToolbar, #tabbrowser-tabs {
+    margin-left: -8px !important;
+    margin-top: -1px !important;
  }
   
  .tabbrowser-tab::before, .tabbrowser-tab::after { 
@@ -60,16 +72,35 @@
    opacity: 1 !important;
    visibility: visible !important; 
  }
- 
-
   
+
+
   /* Navbar stuff */
+  
+  .scrollbox-innerbox {
+    background: var(--bg) !important;;
+  }
+  
+  #back-button > .toolbarbutton-icon {
+    background: #1c1c1c !important;
+    border-radius: 0 !important;
+    max-height: 24px !important;
+    margin-left: 0px !important;
+    transition: margin-left 0.2s !important;
+  }
+  
+  #forward-button > .toolbarbutton-icon {
+    background-color: #1c1c1c !important;
+  
+  }
   
   #nav-bar-customization-target{
     height: 50px !important;
-    background: #121212 !important;
-    border-top: 2px solid #fff !important;
+    background: var(--bg) !important;
+    border: none none #fff !important;
     margin-top: -2px !important;
+    margin-bottom: 0px !important;
+    padding-top: 7px !important;
   }
   
   /*#nav-bar {
@@ -79,21 +110,23 @@
   #urlbar {
     margin-left: 11px !important;
     margin-right: 6px !important;
-    background: #242424 !important;
+    background: #fff !important;
     transition: background 0.2s;
+    color: #000 !important;
   }
   
   .searchbar-textbox{
-    background: #242424 !important;
+    background: #fff !important;
+    color: #000 !important;
     margin-right: 7px !important;
     transition: background 0.2s;
 
   }
   
   .searchbar-textbox:hover, #urlbar:hover{
-    background: #383838 !important;
+    background: #fff !important;
   }
-
+  
   
   ::-moz-placeholder {
     opacity: 0 !important;

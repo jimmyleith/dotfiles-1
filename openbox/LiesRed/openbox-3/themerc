@@ -86,7 +86,7 @@ menu.separator.padding.width: 6
 menu.separator.padding.height: 3
 
 menu.items.bg: Flat Solid
-menu.items.bg.color: #000000
+menu.items.bg.color: #121212
 menu.items.text.color: #FFFFFF
 menu.items.disabled.text.color: #aaaaaa
 
