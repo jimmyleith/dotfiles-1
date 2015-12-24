@@ -7,12 +7,10 @@ local gears = require("gears")
 local lain = require ("lain")
 
 local awful = require ("awful") 
-local vicious = require ("vicious")
-local naughty = require ("naughty")
 
 awful.rules = require("awful.rules")
               require("awful.autofocus")
-local blingbling = require("blingbling")
+
 
 local wibox = require("wibox")
 local beautiful = require("beautiful")
@@ -132,17 +130,6 @@ cpu = lain.widgets.cpu({
     end
 })
 
-cpu_graph = blingbling.line_graph({ 
- height = 18,
- width = 100,
- show_text = false,
- rounded_size = 1,
- graph_background_color = beautiful.bg_focus
-})
-cpu_graph:set_graph_line_color("#B00042")
-cpu_graph:set_graph_color("#B00042")
-vicious.register(cpu_graph, vicious.widgets.cpu,'$1',2)
-
 temp = lain.widgets.temp({
     settings = function()
         widget:set_text(" CORE: " .. coretemp_now .. "°C ")
@@ -261,8 +248,6 @@ for s = 1, screen.count() do
             right_layout:add(memory)
             right_layout:add(spr)
             right_layout:add(cpu)
-            --right_layout:add(spr)
-            --right_layout:add(cpu_graph)
             right_layout:add(spr)
             right_layout:add(temp)
             right_layout:add(sprb)
