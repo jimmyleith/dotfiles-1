@@ -1,3 +1,3 @@
 # anshi/lies 
 
-openbox buttons are probably broken 
+Openbox dialog text color is invisible 
