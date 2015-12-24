@@ -40,10 +40,11 @@ window.active.grip.bg.colorTo: #4d6982
 
 window.active.button.unpressed.image.color: #FFFFFF
 window.active.button.toggled.pressed.image.color: #FFFFFF
+window.active.button.hover.image.color: #D81860
+
 window.active.button.unpressed.bg: Parentrelative
 window.active.button.pressed.bg: Parentrelative
 window.active.button.disabled.bg: Parentrelative
-window.active.button.hover.bg: Parentrelative
 window.active.button.toggled.unpressed.bg: Parentrelative
 window.active.button.toggled.hover.bg: Parentrelative
 
@@ -90,5 +91,5 @@ menu.items.text.color: #FFFFFF
 menu.items.disabled.text.color: #aaaaaa
 
 menu.items.active.bg: Parentrelative
-menu.items.active.text.color: #fff
+menu.items.active.text.color: #d81860
 
