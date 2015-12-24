@@ -16,7 +16,7 @@
   
   /* Hide stuff */
   
-  .tab-background-start, .tab-background-end, #PanelUI-button,/* #back-button, #forward-button, #urlbar-reload-button, */ .tab-close-button.close-icon, .tab-icon-image, .autocomplete-history-dropmarker.urlbar-history-dropmarker,.tabs-newtab-button, .tab-icon-overlay{
+  .tab-background-start, .tab-background-end, #PanelUI-button, #back-button, #forward-button, #urlbar-reload-button, .tab-close-button.close-icon, .tab-icon-image, .autocomplete-history-dropmarker.urlbar-history-dropmarker,.tabs-newtab-button, .tab-icon-overlay{
     display: none !important;
   }
   
@@ -80,19 +80,7 @@
   .scrollbox-innerbox {
     background: var(--bg) !important;;
   }
-  
-  #back-button > .toolbarbutton-icon {
-    background: #1c1c1c !important;
-    border-radius: 0 !important;
-    max-height: 24px !important;
-    margin-left: 0px !important;
-    transition: margin-left 0.2s !important;
-  }
-  
-  #forward-button > .toolbarbutton-icon {
-    background-color: #1c1c1c !important;
-  
-  }
+
   
   #nav-bar-customization-target{
     height: 50px !important;
@@ -103,9 +91,9 @@
     padding-top: 7px !important;
   }
   
-  /*#nav-bar {
-    box-shadow: 0px 3px 10px #212121 !important;
-  }*/
+  #nav-bar {
+    background: var(--bg) !important;
+  }
   
   #urlbar {
     margin-left: 11px !important;
