@@ -1,5 +1,3 @@
-
-
 # Window geometry
 padding.width: 0
 padding.height: 5
@@ -22,6 +20,10 @@ window.inactive.client.color: #cccccc
 
 # Window title justification
 window.label.text.justify: Center
+
+osd.label.text.color: #fff
+osd.hilight.bg.color: #d81860
+osd.unhilight.bg.color: #fff
 
 # Active window
 window.active.title.bg: Solid Flat
