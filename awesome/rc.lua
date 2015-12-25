@@ -5,7 +5,7 @@
 -- Required libraries
 local gears = require("gears")
 local lain = require ("lain")
-
+local naughty = require ("naughty")
 local awful = require ("awful") 
 
 awful.rules = require("awful.rules")
