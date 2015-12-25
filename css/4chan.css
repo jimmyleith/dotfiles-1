@@ -3,13 +3,16 @@
   /* 4ch CSS */
   
   /* Hide some useless things */
-  input[type="checkbox"], .fa-minus-square-o, #bannerCnt, .qr-link-container, hr {
+  input[type="checkbox"], .fa-minus-square-o, #bannerCnt, .qr-link-container, hr, #absbot {
     display: none !important;
   }
   
   /* Body Color*/
   body {
     background: #fff url("https://a.pomf.cat/bhdzqo.jpg") !important;
+    background-repeat: repeat !important;
+    background-attachment: fixed !important;
+    background-position: center center !important;
     color: #fff !important;
     text-shadow: 1px 1px 1px #000 !important;
   }
@@ -33,12 +36,17 @@
     margin-left: 230px !important;
   }
   
+  /* Catalog Fix */
+  .catalog-small {
+    margin-top: 22px !important;
+  }
+  
   /* Center thread out */
   .thread {
     background: #121212 !important;
     width: 1100px !important;
     margin: 30px auto !important;
-      margin-top: 30px !important;
+    margin-top: 30px !important;
   }
   
   /* OP (this doesnt look very good atm) */
@@ -98,9 +106,9 @@
   
   /* File info rice */
   .fileText {
-     opacity: 0 !important;
-     margin-bottom: -16px !important;
-     transition: opacity 0.2s, margin-bottom 0.2s;
+   opacity: 0 !important;
+   margin-bottom: -16px !important;
+   transition: opacity 0.2s, margin-bottom 0.2s;
   }
   
   .fileText a {
@@ -112,7 +120,7 @@
   }
   .post:hover .fileText {
    opacity: 1 !important;
-     margin-bottom: 1px !important;
+   margin-bottom: 1px !important;
   }
   
   /* Align menu to right and autohide */
