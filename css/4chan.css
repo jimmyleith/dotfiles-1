@@ -1,153 +1,159 @@
-@-moz-document url-prefix("http://boards.4chan.org") {
-
-
-/* 4chan css :3 */
-
-
-/* Colours and housekeeping */
-
-body {
-    background: #121212 !important;
-}
-
-#qr {
-    border: 0px solid #121212 !important;
-    box-shadow: none !important;
-    border-radius: 0px 0px 0px 0px !important;
-}   
-.prettyprint {
-    font-size: 11px !important;
-    padding: 2px !important;
-}
-#file-n-submit > input:nth-child(3), #qr-file-button {
-    color: #000 !important;
-    font-size: 11px !important;
-}
-    
-#file-n-submit {
-    background: #212121 !important;
-}
-    
-#qr > div:nth-child(1), #qr-filename-container {
-    background: #212121 !important;
-    color: #fff !important;
-    padding: 5px !important;
-    font-size: 11px !important;
-}
-    
-.navLinks {
-    color: #121212 !important;  
-    text-align: center !important;
-}
+@-moz-document domain("4chan.org") {
   
-#header-bar {
-    background: #1c1c1c !important;
-    border: none !important;
-}
-
-/* Main text colour */
-.dateTime, .postMessage, .file-info, .bottomCtrl, .comment, tr, li, .subject, .boardTitle, .globalMessage{
-    color: #fff !important;
-}
-    
-.globalMessage {
-    padding: 5px !important; 
-    font-weight: 400 !important;
-}
-
-.name {
-    font-weight: 500 !important;
-    color: #fff !important;
-}
-    
-.reveal-spoilers {
-    background: #1c1c1c !important;
+  /* 4ch CSS */
+  
+  /* Hide some useless things */
+  input[type="checkbox"], .fa-minus-square-o, #bannerCnt, .qr-link-container, hr {
     display: none !important;
-}
-
-a, a:hover, .quotelink, .catalog-stats{
+  }
+  
+  /* Body Color*/
+  body {
+    background: #fff url("https://a.pomf.cat/bhdzqo.jpg") !important;
+    color: #fff !important;
+    text-shadow: 1px 1px 1px #000 !important;
+  }
+  body a {
     color: #d81860 !important;
-    text-decoration: none !important;
-}
-
-hr, .absBotDisclaimer, #footer-links, .qr-link-container, #togglePostFormLink, #bannerCnt, 
-input[type="checkbox"], .fa-minus-square-o, .qr-link-bottom, .qr-link-container-bottom, #paste-area { display: none !important; }
-
-/* Center out the thread */
-
-div.thread {
+  }
+  
+  /* Top board items */
+  #blotter, #togglePostFormLink{
+    margin-top: 10px !important;
+  }
+  
+  #blotter > tfoot:nth-child(3) > tr:nth-child(1) > td:nth-child(1) {
+    text-align: center !important;
+    padding-top: 5px !important;
+  }
+  
+  /* Nav links */
+  
+  .navLinks {
+    margin-left: 230px !important;
+  }
+  
+  /* Center thread out */
+  .thread {
+    background: #121212 !important;
     width: 1100px !important;
     margin: 30px auto !important;
-    margin-top: 30px !important;
-}     
-
-    
-    
-/* Fix width and padding 
-
-    .postMessage {
-
-        max-height: 130px !important;
-    }   
-    
-    */
-.post.reply {
-    width: 100% !important;
-    padding: 10px !important;
-    -moz-box-sizing:border-box!important;
-    background-color: #1c1c1c !important;
-    border: none !important;
-    margin: 15px 0 !important;
-}
-
-
-/* Fix some margins */
-
-
-    
-.catalog-small {  
-    margin-top: 15px !important;
-}
-
-.postInfo {
-    margin-left: 21px !important;
-}
-
-.op  div.postInfo {
-  margin-left: -5px !important;
-}
+      margin-top: 30px !important;
+  }
   
-.bottomCtrl {
-    float: none !important;
-    text-align: center !important;  
-    margin-top: 15px !important;
-}
-
-.fileThumb {
-    margin-top: 15px !important;
-}
-
-/* Dank hover effects */  
-
-.menu-button {
-    opacity: 0 !important; 
-    margin-right: -5px !important;
-    transition: opacity 0.2s, margin-right 0.2s !important;
-}
-
-.post:hover .menu-button {
-      opacity: 1 !important;
-      margin-right: 0 !important;
-}
-
-.fileText {
-    opacity: 0 !important;
-    margin-bottom: -16px !important;
-    transition: opacity 0.2s, margin-bottom 0.2s;
-}
-.post:hover .fileText {
-    opacity: 1 !important;
-    margin-bottom: -10px !important;
-}
+  /* OP (this doesnt look very good atm) */
+  
+  .op {
+    background: #1c1c1c !important;
+    padding: 20px !important;
+    margin: 0 5px 0 -15px !important;
+  }
+  .op .fileThumb {
+    float: right !important;
+    margin: 20px 0 !important;
+  }
+  .boardTitle {
+    color: #fff !important;
+    text-shadow: 1px 1px 1px #000 !important;
+  }
+  
+  /* Name and trip colors */
+  .name, .postertrip {
+    color: #EE4B9F !important;
+    font-weight: 400 !important;
+  }
+  
+  /* Subject color */
+  .subject {
+    color: #8D2C2C !important;
+  }
+  
+  /* Reply rice */
+  .reply {
+    margin-left: -7px !important;
+    padding: 8px !important;
+    color: #fff !important;
+    background: #1c1c1c !important;
+    border: none !important;
+    box-shadow: 1px 2px 2px #000 !important;
+    width: 99% !important;
     
+  }
+  .postNum a{
+    color: #fff !important;
+  }
+  .backlink, .quotelink {
+    color: #d81860 !important;
+    text-decoration: none !important;
+  }
+  
+  .backlink {
+    margin-left: 5px !important;
+  }
+  
+  /* Gap between posts */
+  .postContainer {
+    margin: 12px 0 !important;
+  }
+  
+  /* File info rice */
+  .fileText {
+     opacity: 0 !important;
+     margin-bottom: -16px !important;
+     transition: opacity 0.2s, margin-bottom 0.2s;
+  }
+  
+  .fileText a {
+    color: #fff !important;
+    text-decoration: none !important;
+  }
+  .fileText .sauce {
+    color: #BF64BD !important;
+  }
+  .post:hover .fileText {
+   opacity: 1 !important;
+     margin-bottom: 1px !important;
+  }
+  
+  /* Align menu to right and autohide */
+  .menu-button {
+    float: right !important;
+    color: #fff !important;
+    opacity: 0 !important;
+    transition: opacity 0.2s !important;
+  }
+  .replyContainer:hover .menu-button {
+    opacity: 1 !important;
+  }
+  
+  /* Fix QR */
+  #qr {
+    color: #fff !important;
+    background: #373737 !important;
+    border: none !important;
+    font-size: 12px !important;
+    border-radius: 0 !important;
+    padding: 2px !important;
+  } 
+  input {
+    color: #000 !important;
+    font-size: 11px !important;
+  }
+  .move {
+    padding: 3px !important;
+  }
+  .close {
+    color: #d81860 !important;
+  }
+  
+  /* Set some background colors */
+  .dialog:not(#thread-watcher):not(#qr) {
+    background: #1C1C1C !important;
+    color: #fff !important;
+  }
+  
+
+  
+
+  
 }
