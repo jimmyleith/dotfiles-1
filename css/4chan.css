@@ -1,6 +1,6 @@
 @-moz-document domain("4chan.org") {
   
-  /* Anshi lies 4ch CSS */
+  /* 4ch CSS */
   
   /* Hide some useless things */
   input[type="checkbox"], .fa-minus-square-o, #bannerCnt, .qr-link-container, hr, #absbot {
@@ -10,7 +10,8 @@
   /* Body Color*/
   body {
     background: #fff url("https://a.pomf.cat/bhdzqo.jpg") !important;
-    background-repeat: repeat !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
     background-attachment: fixed !important;
     background-position: center center !important;
     color: #fff !important;
@@ -43,23 +44,21 @@
   
   /* Center thread out */
   .thread {
-    background: #121212 !important;
+    background: rgba(18,18,18, .95) !important;
     width: 1100px !important;
     margin: 30px auto !important;
-    margin-top: 30px !important;
+	  margin-top: 30px !important;
   }
   
   /* OP (this doesnt look very good atm) */
   
   .op {
-    background: #1c1c1c !important;
+    background: #171717 !important;
     padding: 20px !important;
     margin: 0 5px 0 -15px !important;
+    min-height: 170px !important;
   }
-  .op .fileThumb {
-    float: right !important;
-    margin: 20px 0 !important;
-  }
+
   .boardTitle {
     color: #fff !important;
     text-shadow: 1px 1px 1px #000 !important;
@@ -78,13 +77,13 @@
   
   /* Reply rice */
   .reply {
-    margin-left: -7px !important;
-    padding: 8px !important;
+    margin-left: -15px !important;
+    padding: 8px 14px !important;
     color: #fff !important;
-    background: #1c1c1c !important;
+    background: #171717 !important;
     border: none !important;
-    box-shadow: 1px 2px 2px #000 !important;
-    width: 99% !important;
+    box-shadow: 0px 4px 2px #0a0a0a !important;
+    width: 100% !important;
     
   }
   .postNum a{
@@ -101,14 +100,14 @@
   
   /* Gap between posts */
   .postContainer {
-    margin: 12px 0 !important;
+    margin: 17px 0 !important;
   }
   
   /* File info rice */
-  .fileText {
-   opacity: 0 !important;
-   margin-bottom: -16px !important;
-   transition: opacity 0.2s, margin-bottom 0.2s;
+  .reply .fileText {
+ 	 opacity: 0 !important;
+	 margin-bottom: -16px !important;
+	 transition: opacity 0.2s, margin-bottom 0.2s;
   }
   
   .fileText a {
@@ -118,9 +117,9 @@
   .fileText .sauce {
     color: #BF64BD !important;
   }
-  .post:hover .fileText {
+  .reply:hover .fileText {
    opacity: 1 !important;
-   margin-bottom: 1px !important;
+	 margin-bottom: 1px !important;
   }
   
   /* Align menu to right and autohide */
@@ -130,7 +129,7 @@
     opacity: 0 !important;
     transition: opacity 0.2s !important;
   }
-  .replyContainer:hover .menu-button {
+  .postContainer:hover .menu-button {
     opacity: 1 !important;
   }
   
@@ -159,9 +158,4 @@
     background: #1C1C1C !important;
     color: #fff !important;
   }
-  
-
-  
-
-  
 }
