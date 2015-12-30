@@ -11,7 +11,7 @@ local awful = require ("awful")
 awful.rules = require("awful.rules")
               require("awful.autofocus")
 
-
+--
 local wibox = require("wibox")
 local beautiful = require("beautiful")
 
