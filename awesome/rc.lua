@@ -5,16 +5,14 @@
 -- Required libraries
 local gears = require("gears")
 local lain = require ("lain")
-local naughty = require ("naughty")
-local awful = require ("awful") 
 
+local awful = require ("awful") 
+local naughty = require ("naughty")
 awful.rules = require("awful.rules")
               require("awful.autofocus")
 
---
 local wibox = require("wibox")
 local beautiful = require("beautiful")
-
 
 local xdg_menu = require("archmenu")
 
@@ -104,17 +102,7 @@ mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon, menu = myma
 
 -- Wibox
 
-mpd = wibox.widget.textbox()
---mpdupdater = timer({ timeout = 2 })
---mpdupdater:connect_signal("timeout", function() mpd:set_text(crrSong()) end )
---mpdupdater:start()
 
-function crrSong() 
-
-    local s = string.sub(awful.util.pread("ncmpcpp --current-song"), 8, -1)
-
-    return s
-end
 
 markup = lain.util.markup
 
@@ -135,8 +123,6 @@ temp = lain.widgets.temp({
         widget:set_text(" CORE: " .. coretemp_now .. "°C ")
     end
 })
-
-
 
 spr = wibox.widget.textbox()
 spr:set_markup("<span color='#D81860'> II </span>")
@@ -220,15 +206,15 @@ for s = 1, screen.count() do
         end
 
         if s == 2 then 
-    
+            right_layout:add(spr)
             right_layout:add(memory)
             right_layout:add(spr)
             right_layout:add(cpu)
             right_layout:add(spr)
             right_layout:add(temp)
-            right_layout:add(spr)
             right_layout:add(sprb)
-            right_layout:add(mylayoutbox[s])
+            right_layout:add(sprb)
+            left_layout:add(mylayoutbox[s])
         end
         -- Adds all layout items to wibox
         local layout = wibox.layout.align.horizontal()
@@ -242,9 +228,7 @@ for s = 1, screen.count() do
         if s == 1 then
 
             left_layout:add(mytaglist[s])
-            left_layout:add(sprb)
-            left_layout:add(mpd)
-            left_layout:add(sprb)
+            right_layout:add(spr)
             right_layout:add(memory)
             right_layout:add(spr)
             right_layout:add(cpu)
@@ -283,9 +267,6 @@ root.buttons(awful.util.table.join(
 --Key bindings
 
 globalkeys = awful.util.table.join(
-    
-
---Time
 
 awful.key({ modkey }, "b", function() 
     naughty.notify({ 
@@ -296,10 +277,10 @@ end),
 
 awful.key({ modkey }, "v", function() 
     naughty.notify({
-        text=string.format("%s%s", "Currently Playing:\n", "<span color='#d81860'>" .. crrSong() .. "</span>"),
+        text=string.format("%s%s", "Currently Playing:\n", "<span color='#d81860'>" .. string.sub(awful.util.pread("ncmpcpp --current-song"), 8, -1) .. "</span>"),
         timeout=2
     })
-end),					
+end),						
     
 awful.key({ modkey },"x",     
 
@@ -314,8 +295,8 @@ end),
 awful.key({ modkey } , "e" , function () awful.util.spawn('thunar')    end),
 
   
-awful.key({ altkey }, "p", function() awful.util.spawn("scrot") end),
-awful.key({ altkey }, "l", function() awful.util.spawn_with_shell("python ~/movess.py") end),
+awful.key({  }, "Print", function() awful.util.spawn("scrot") end),
+awful.key({  }, "Scroll_Lock", function() awful.util.spawn_with_shell("python ~/movess.py") end),
 
     
 awful.key({ modkey }, "Left", function () lain.util.tag_view_nonempty(-1) end),
