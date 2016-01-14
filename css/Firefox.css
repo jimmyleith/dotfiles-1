@@ -18,7 +18,7 @@
   
   /* Hide stuff */
   
-  .tab-background-start, .tab-background-end, #PanelUI-button, #back-button, #forward-button, #urlbar-reload-button, .tab-close-button.close-icon, .tab-icon-image, .autocomplete-history-dropmarker.urlbar-history-dropmarker,.tabs-newtab-button, .tab-icon-overlay{
+  .tab-background-start, .tab-background-end, #PanelUI-button, #back-button, #forward-button, #urlbar-reload-button, .tab-close-button.close-icon, .autocomplete-history-dropmarker.urlbar-history-dropmarker,.tabs-newtab-button, .tab-icon-overlay,  .tabbrowser-tab:not([pinned]) .tab-icon-image{
     display: none !important;
   }
   
@@ -36,18 +36,19 @@
     font-family: var(--font) !important; 
     font-size: var(--font-size) !important;
     height: 22px !important;
-    font-weight: 600 !important;
+    font-weight: 400 !important;
     border: none !important;
-  }
+      
+      }
   
   .tabbrowser-tab *, .tabs-newtab-button * {
     background: none !important; list-style-image: none !important;
-    margin: 0 0 0 0 !important;
+    margin: 0 0 0 1px !important;
     padding-left: 1px !important;
     -moz-appearance: none !important;
     border: none !important;
+    
  }
-  
   .tabbrowser-tab[selected] {
     background: var(--bg) !important;
     color: #fff !important;
@@ -60,11 +61,10 @@
     background: var(--bg) !important;
     text-align: center !important;
     color: #fff !important;
-
   }
   
   #TabsToolbar, #tabbrowser-tabs {
-    margin-left: -8px !important;
+    margin-left: -5px !important;
     margin-top: -1px !important;
  }
   
@@ -80,14 +80,15 @@
   /* Navbar stuff */
   
   .scrollbox-innerbox {
-    background: var(--bg) !important;;
+    background: var(--bg) !important;
+   
   }
 
   
   #nav-bar-customization-target{
+    
     height: 50px !important;
     background: var(--bg) !important;
-    border: none none #fff !important;
     margin-top: -2px !important;
     margin-bottom: 0px !important;
     padding-top: 7px !important;
@@ -99,18 +100,20 @@
   
   #urlbar {
     margin-left: 11px !important;
-    margin-right: 6px !important;
+    margin-right: 2px !important;
     background: #fff !important;
+    border-radius: 0 !important;
     transition: background 0.2s;
+    border-left: solid #b1b1b1 1px !important;
     color: #000 !important;
   }
   
   .searchbar-textbox{
     background: #fff !important;
     color: #000 !important;
-    margin-right: 7px !important;
+    margin-right: 5px !important;
     transition: background 0.2s;
-
+    border-radius: 0 !important;
   }
   
   .searchbar-textbox:hover, #urlbar:hover{
