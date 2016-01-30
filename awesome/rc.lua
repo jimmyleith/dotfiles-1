@@ -97,10 +97,7 @@ mymainmenu = awful.menu({ items = {
 { "reboot", 'reboot'},
 { "shutdown", 'shutdown'}
      
-}})
-                                                                                                      
-mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon, menu = mymainmenu })
-
+}})                                                                                                 
 -- Wibox
 
 
