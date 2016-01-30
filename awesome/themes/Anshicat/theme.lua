@@ -46,7 +46,6 @@ theme.titlebar_bg_focus		= "#D81860"
 theme.titlebar_fg_normal	= "#ffffff"
 theme.titlebar_fg_focus		= "#ffffff"
 
-
 theme.textbox_widget_margin_top	= 1
 
 theme.notify_fg			= theme.fg_normal

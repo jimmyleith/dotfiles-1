@@ -14,7 +14,7 @@ awful.rules = require("awful.rules")
 local wibox = require("wibox")
 local beautiful = require("beautiful")
 
-local xdg_menu = require("archmenu")
+--local xdg_menu = require("archmenu")
 
 do
     local sterr = false
@@ -38,9 +38,8 @@ autohide_topbar = false
 
 modkey     = "Mod4"
 altkey     = "Mod1"
-terminal   = "urxvt"
 align_widgets_screen_1 = true
-wallpaper_1 = os.getenv("HOME") .. "/Pictures/Wallpapers/japanedit5.png"
+wallpaper_1 = os.getenv("HOME") .. "/Pictures/Wallpapers/lain.jpg"
 wallpaper_2 = ""
 
 -- Tags
@@ -92,9 +91,11 @@ end
 
 mymainmenu = awful.menu({ items = { 
 
-{ "applications", xdgmenu },
-{ "open terminal", terminal },
-{ "firefox", 'firefox'}
+--{ "applications", xdgmenu },
+{ "terminal", 'urxvt' },
+{ "firefox", 'firefox'},
+{ "reboot", 'reboot'},
+{ "shutdown", 'shutdown'}
      
 }})
                                                                                                       
@@ -105,6 +106,8 @@ mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon, menu = myma
 
 
 markup = lain.util.markup
+
+
 
 memory = lain.widgets.mem({
     settings = function()
@@ -228,6 +231,7 @@ for s = 1, screen.count() do
         if s == 1 then
 
             left_layout:add(mytaglist[s])
+           -- ight_layout:add(wireless)
             right_layout:add(spr)
             right_layout:add(memory)
             right_layout:add(spr)
@@ -280,7 +284,14 @@ awful.key({ modkey }, "v", function()
         text=string.format("%s%s", "Currently Playing:\n", "<span color='#d81860'>" .. string.sub(awful.util.pread("ncmpcpp --current-song"), 8, -1) .. "</span>"),
         timeout=2
     })
-end),						
+end),				
+
+awful.key({ modkey }, "r", function()
+ naughty.notify({
+        text = awful.util.pread("ping -W 2 -c 1 8.8.8.8") .. "boop",
+        timeout=2
+    })		
+end),
     
 awful.key({ modkey },"x",     
 
@@ -371,7 +382,7 @@ awful.key({ altkey }, "j",
     awful.key({ modkey, "Control" }, "n",      awful.client.restore),
 
     -- Standard program
-    awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
+    awful.key({ modkey,           }, "Return", function () awful.util.spawn('urxvt') end),
     awful.key({ modkey, "Control" }, "r",      awesome.restart),
     awful.key({ modkey, "Shift"   }, "q",      awesome.quit),
     awful.key({ modkey }, "",
@@ -490,6 +501,14 @@ awful.rules.rules = {
     callback = awful.client.setslave},
 
 }
+
+-- Functions
+
+function getConn() 
+    
+   
+    
+end
 
 -- Signals
 
