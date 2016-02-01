@@ -131,7 +131,7 @@ wirelessTick:connect_signal("timeout", function()
     if string.match(st, "unreachable") then
         wireless:set_image(beautiful.wireless_off)
     else
-        wireless:set_image(beautiful.wireless_off)
+        wireless:set_image(beautiful.wireless_on)
     end
     p:close()
 end) 
