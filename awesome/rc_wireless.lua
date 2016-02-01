@@ -124,7 +124,7 @@ temp = lain.widgets.temp({
 
 wireless = wibox.widget.imagebox()
 
-wirelessTick = timer({timeout = 3})
+wirelessTick = timer({timeout = 15})
 wirelessTick:connect_signal("timeout", function() 
     local p = io.popen("ping -W 2 -c 1 8.8.8.8 2>&1")
     local st = p:read()
