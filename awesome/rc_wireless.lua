@@ -89,7 +89,7 @@ end
 
 -- Menu
 
-mymainmenu = awful.menu({ items = { 
+mainmenu = awful.menu({ items = { 
 
 --{ "applications", xdgmenu },
 { "terminal", 'urxvt' },
@@ -142,15 +142,13 @@ spr:set_markup("<span color='#ffffff'> II </span>")
 sprb = wibox.widget.textbox ('  ')
 
 bar = {}
-mypromptbox = {}
-mylayoutbox = {}
-mytaglist = {}
-mytaglist.buttons = awful.util.table.join(
+taglist = {}
+taglist.buttons = awful.util.table.join(
 
                     awful.button({ }, 1, awful.tag.viewonly),
                     awful.button({ }, 3, awful.tag.viewtoggle))
-mytasklist = {}
-mytasklist.buttons = awful.util.table.join(
+tasklist = {}
+tasklist.buttons = awful.util.table.join(
                      awful.button({ }, 1, 
                         function (c)
                             if c == client.focus then
@@ -200,11 +198,8 @@ mytasklist.buttons = awful.util.table.join(
 
 for s = 1, screen.count() do
 
-    mypromptbox[s] = awful.widget.prompt()
-    mylayoutbox[s] = awful.widget.layoutbox(s)
-
-    mytaglist[s] = awful.widget.taglist(s, awful.widget.taglist.filter.all, mytaglist.buttons)
-    mytasklist[s] = awful.widget.tasklist(s, awful.widget.tasklist.filter.alltags, mytasklist.buttons)
+    taglist[s] = awful.widget.taglist(s, awful.widget.taglist.filter.all, taglist.buttons)
+    tasklist[s] = awful.widget.tasklist(s, awful.widget.tasklist.filter.alltags, tasklist.buttons)
 
     bar[s] = awful.wibox({ position = "top", screen = s, height = 27})
 
@@ -215,7 +210,7 @@ for s = 1, screen.count() do
     if not align_widgets_screen_1 then
         if s == 1 then
 
-            left_layout:add(mytaglist[s])
+            left_layout:add(taglist[s])
         end
 
         if s == 2 then 
@@ -228,20 +223,19 @@ for s = 1, screen.count() do
             --right_layout:add(temp)
             right_layout:add(sprb)
             right_layout:add(sprb)
-            left_layout:add(mylayoutbox[s])
         end
         -- Adds all layout items to wibox
         local layout = wibox.layout.align.horizontal()
 
         layout:set_left(left_layout)
-        layout:set_middle(mytasklist[s])
+        layout:set_middle(tasklist[s])
         layout:set_right(right_layout)
         bar[s]:set_widget(layout)
 
     else
         if s == 1 then
 
-            left_layout:add(mytaglist[s])
+            left_layout:add(taglist[s])
             right_layout:add(wireless)
             right_layout:add(sprb)
             right_layout:add(memory)
@@ -251,19 +245,18 @@ for s = 1, screen.count() do
             --right_layout:add(temp)
             right_layout:add(sprb)
             right_layout:add(sprb)
-            left_layout:add(mylayoutbox[s])
         end
 
         if s == 2 then 
 
-            left_layout:add(mytaglist[s])
+            left_layout:add(taglist[s])
         end
 
         -- Adds all layout items to wibox
         local layout = wibox.layout.align.horizontal()
 
         layout:set_left(left_layout)
-        --layout:set_middle(mytasklist[s])
+        --layout:set_middle(tasklist[s])
         layout:set_right(right_layout)
         bar[s]:set_widget(layout)
     end
@@ -276,7 +269,7 @@ end
 
 --Mouse Bindings
 root.buttons(awful.util.table.join(
-    awful.button({ }, 3, function () mymainmenu:toggle() end)
+    awful.button({ }, 3, function () mainmenu:toggle() end)
 ))
 
 --Key bindings
@@ -395,15 +388,7 @@ awful.key({ altkey }, "j",
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.util.spawn('urxvt') end),
     awful.key({ modkey, "Control" }, "r",      awesome.restart),
-    awful.key({ modkey, "Shift"   }, "q",      awesome.quit),
-    awful.key({ modkey }, "",
-
-        function ()
-            awful.prompt.run({ prompt = "Run Lua code: " },
-            mypromptbox[mouse.screen].widget,
-            awful.util.eval, nil,
-            awful.util.getdir("cache") .. "/history_eval")
-        end)
+    awful.key({ modkey, "Shift"   }, "q",      awesome.quit)
 )
 
 
