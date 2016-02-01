@@ -124,14 +124,14 @@ temp = lain.widgets.temp({
 
 wireless = wibox.widget.imagebox()
 
-wirelessTick = timer({timeout = 3})
+wirelessTick = timer({timeout = 15})
 wirelessTick:connect_signal("timeout", function() 
     local p = io.popen("ping -W 2 -c 1 8.8.8.8 2>&1")
     local st = p:read()
     if string.match(st, "unreachable") then
         wireless:set_image(beautiful.wireless_off)
     else
-        wireless:set_image(beautiful.wireless_off)
+        wireless:set_image(beautiful.wireless_on)
     end
     p:close()
 end) 
