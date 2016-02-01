@@ -48,6 +48,10 @@ theme.titlebar_fg_focus		= "#ffffff"
 
 theme.textbox_widget_margin_top	= 1
 
+
+theme.wireless_on		= themes_dir .. "img/wireless_on.png"
+theme.wireless_off		= themes_dir .. "img/wireless_off.png"
+
 theme.notify_fg			= theme.fg_normal
 theme.notify_bg			= theme.bg_normal
 theme.notify_border		= theme.border_focus
